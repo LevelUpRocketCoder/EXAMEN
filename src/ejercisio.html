@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta para Mamá</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        .neon-text {
+            font-size: 24px;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .image-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="neon-text">¡Feliz Día de la Madre!</h1>
+        <p class="neon-text">Querida mamá,</p>
+        <p class="neon-text">En este día especial, quiero expresarte mi gratitud y amor. Eres mi guía, mi apoyo y mi inspiración.</p>
+        <p class="neon-text">Gracias por todo lo que haces por mí. Tu amor incondicional ilumina mi vida como estas luces de neón.</p>
+        <div class="image-container">
+            <!-- Inserta aquí la foto de tu madre -->
+            <input type="file" accept="image/*" id="foto-mama" onchange="mostrarFoto()">
+            <img id="imagen-mama" alt="Foto de mamá">
+        </div>
+        <p class="neon-text">Tus logros:</p>
+        <ul class="neon-text">
+            <li>Logro 1: Siempre salir adelante a pesar de todo</li>
+            <li>Logro 2: Darnos mucho cariño y cuidandonos de todo</li>
+            <li>Logro 3: Nunca rendirse y ahora es la mejor Directora de su colegio</li>
+        </ul>
+        <p class="neon-text">Con cariño,</p>
+        <p class="neon-text">El hijo del medio Julio Cesar Silva Fuertes</p>
+    </div>
+    <script>
+        function mostrarFoto() {
+            const input = document.getElementById('foto-mama');
+            const imagen = document.getElementById('imagen-mama');
+            const archivo = input.files[0];
+            if (archivo) {
+                const url = URL.createObjectURL(archivo);
+                imagen.src = url;
+            }
+        }
+    </script>
+    <!-- Inserta aquí el GIF de fondo -->
+    <img src="osito.gif" alt="GIF de fondo">
+    <!-- Enlace a la canción favorita de mamá -->
+    <p class="neon-text">
+        <a href="https://www.youtube.com/watch?v=9BMwcO6_hyA">SU CANCION FAVORITA</a>
+    </p>
+</body>
+
+</html>
